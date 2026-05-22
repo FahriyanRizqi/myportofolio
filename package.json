@@ -1,0 +1,11 @@
+{
+  "name": "myportofolio-fullstack",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "start \"Backend\" cmd /k \"npm run backend\" && start \"Frontend\" cmd /k \"npm run frontend\"",
+    "backend": "php -S localhost:8000",
+    "frontend": "npm --prefix frontend run dev",
+    "install:frontend": "npm --prefix frontend install"
+  }
+}
