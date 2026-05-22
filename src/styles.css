@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #070818;
+  color: #f8fbff;
+  font-family: Inter, sans-serif;
+  overflow-x: hidden;
+}
+
+body.light {
+  background: #eff6ff;
+  color: #111827;
+}
+
+::selection {
+  background: rgba(155, 92, 255, .65);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070818;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#9b5cff, #24e7ff);
+  border-radius: 99px;
+}
+
+.glass {
+  background: linear-gradient(145deg, rgba(255, 255, 255, .12), rgba(255, 255, 255, .04));
+  border: 1px solid rgba(255, 255, 255, .14);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .35);
+}
+
+.neon-text {
+  color: #ffffff;
+  text-shadow: 0 0 16px rgba(155, 92, 255, .78), 0 0 38px rgba(36, 231, 255, .42);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #24e7ff, #9b5cff, #ff4ecd);
+  background-size: 220% 220%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient 7s ease infinite;
+}
+
+.neon-border {
+  position: relative;
+}
+
+.neon-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(120deg, rgba(36, 231, 255, .8), rgba(155, 92, 255, .9), rgba(255, 78, 205, .7));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.cyber-grid {
+  background-image:
+    linear-gradient(rgba(36, 231, 255, .08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(155, 92, 255, .08) 1px, transparent 1px);
+  background-size: 70px 70px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,.85), transparent 76%);
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.9);
+  box-shadow: 0 0 12px rgba(36,231,255,.9);
+}
+
+.section-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.btn-neon {
+  background: linear-gradient(90deg, #24e7ff, #9b5cff, #ff4ecd);
+  background-size: 220% 220%;
+  animation: gradient 8s ease infinite;
+  box-shadow: 0 0 24px rgba(155,92,255,.36);
+}
