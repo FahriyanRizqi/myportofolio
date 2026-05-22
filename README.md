@@ -1,110 +1,16 @@
-# Cyber Portfolio Fullstack
+# React + Vite
 
-Website portfolio modern futuristic untuk kebutuhan magang Web Developer.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Stack: React JS + Vite, Tailwind CSS, Framer Motion, React Icons, Axios, PHP Native, dan MySQL XAMPP.
+Currently, two official plugins are available:
 
-## Struktur
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-```text
-MyPortofolio/
-├── frontend/
-├── backend/
-├── database/
-├── index.php
-└── package.json
-```
+## React Compiler
 
-## Cara Run
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-1. Jalankan Apache dan MySQL dari XAMPP Control Panel.
-2. Buka `http://localhost/phpmyadmin`.
-3. Import file `database/portfolio_db.sql`.
-4. Buka portfolio lewat Apache:
+## Expanding the ESLint configuration
 
-```text
-http://localhost/MyPortofolio/
-```
-
-Root project akan membuka hasil build di `frontend/dist/index.html`.
-
-## Cara Run Development
-
-Jika ingin mode development dengan Vite, buka terminal di folder utama proyek:
-
-```bash
-cd C:\xampp\htdocs\MyPortofolio
-```
-
-Install dependency frontend:
-
-```bash
-npm run install:frontend
-```
-
-Jalankan backend dan frontend sekaligus:
-
-```bash
-npm run dev
-```
-
-Perintah ini akan membuka dua terminal: satu untuk backend, satu untuk frontend.
-
-Jika ingin menjalankan manual, jalankan backend:
-
-```bash
-npm run backend
-```
-
-Backend tersedia di:
-
-```text
-http://localhost:8000
-http://localhost:8000/backend/
-http://localhost:8000/backend/api/getProjects.php
-http://localhost:8000/backend/api/getCertificates.php
-```
-
-Lalu buka terminal kedua untuk frontend:
-
-```bash
-npm run frontend
-```
-
-Frontend tersedia di:
-
-```text
-http://localhost:5173
-```
-
-## Konfigurasi Database
-
-Default koneksi database ada di `backend/config/database.php`:
-
-```php
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "portfolio_db";
-```
-
-## Konfigurasi API Frontend
-
-Default frontend sudah mengarah ke:
-
-```text
-http://localhost:8000/backend/api
-```
-
-Jika ingin URL lain, buat file `frontend/.env`:
-
-```bash
-VITE_API_URL=http://localhost:8000/backend/api
-```
-
-## Kustomisasi
-
-- Ubah nama, deskripsi, social media, dan skills di `frontend/src/data/profile.js`.
-- Ganti CV di `frontend/public/cv-placeholder.pdf`.
-- Edit data project dan certificate dari database `portfolio_db`.
-- Ganti asset dummy URL dengan file lokal jika ingin offline.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
